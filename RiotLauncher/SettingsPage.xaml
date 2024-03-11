@@ -1,0 +1,396 @@
+﻿<Page Loaded="Page_Loaded"
+      x:Class="RiotLauncher.SettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:ui="http://schemas.modernwpf.com/2019" 
+      xmlns:ui2="http://schemas.lepo.co/wpfui/2022/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RiotLauncher"
+      mc:Ignorable="d" 
+      Background="#000000"
+      Opacity="0.9"
+      d:Width="1275" d:Height="820"
+      Title="SettingsPage">
+
+
+    <Page.Resources>
+        <Style x:Key="HoverTextButtonStyle" TargetType="ui2:Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ui2:Button">
+                        <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center">
+                                <ContentPresenter.Resources>
+                                    <Style TargetType="TextBlock">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Opacity" Value="1"/>
+                                            </Trigger>
+                                            <Trigger Property="IsMouseOver" Value="False">
+                                                <Setter Property="Opacity" Value="0.4"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </ContentPresenter.Resources>
+                            </ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="HoverTextButtonStyle2" TargetType="ui2:Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ui2:Button">
+                        <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center">
+                                <ContentPresenter.Resources>
+                                    <Style TargetType="TextBlock">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Opacity" Value="1"/>
+                                            </Trigger>
+                                            <Trigger Property="IsMouseOver" Value="False">
+                                                <Setter Property="Opacity" Value="1"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </ContentPresenter.Resources>
+                            </ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+
+
+
+    <Grid x:Name="PageContent">
+
+
+        <ui2:TextBlock
+          x:Name="SETTINGS"
+          FontFamily="Poppins Bold"
+          FontSize="24"
+          HorizontalAlignment="Left"
+          Margin="67,55,0,0"
+          TextWrapping="Wrap"
+          Text="SETTINGS"
+          VerticalAlignment="Top"
+          Height="50" Width="145"
+          Foreground="White"/>
+
+        <ui2:Button
+          x:Name="RIOTCLIENT"
+          FontFamily="Poppins SemiBold"
+          FontSize="15"
+          HorizontalAlignment="Left"
+          Margin="80,141,0,0"
+          Content="RIOT CLIENT"
+          Background="Transparent"
+          BorderBrush="Transparent"
+          VerticalAlignment="Top"
+          Height="30" Width="250"
+          Style="{StaticResource HoverTextButtonStyle}"
+          Foreground="White"></ui2:Button>
+
+        <ui2:Button
+          x:Name="VALORANT"
+          FontFamily="Poppins Bold"
+          FontSize="15"
+          Margin="70,175,0,00"
+          CornerRadius="5"
+          Content="VALORANT"
+          Background="#1f1f1f"
+          BorderBrush="Transparent"
+          VerticalAlignment="Top"
+          Height="30" Width="250"
+          Foreground="White"/>
+
+        <Image
+          x:Name="Image"
+          Opacity="0.3"
+          HorizontalAlignment="Left"
+          Height="20"
+          Margin="80,146,0,0"
+          VerticalAlignment="Top"
+          Width="30"
+          Source="Assets/RiotLogo.png"/>
+
+        <Image
+          x:Name="ValorantIcon"
+          Opacity="1"
+          HorizontalAlignment="Left"
+          Height="20"
+          Margin="80,180,0,0"
+          VerticalAlignment="Top"
+          Width="30"
+          Source="Assets/valorant-logo.png"/>
+
+        <ui2:TextBlock
+          x:Name="VERSION"
+          FontFamily="Poppins SemiBold"
+          Opacity=".5"
+          FontSize="9"
+          HorizontalAlignment="Left"
+          Margin="78,730,0,0"
+          TextWrapping="Wrap"
+          Text="V81.0.0.1117"
+          VerticalAlignment="Top"
+          Height="50" Width="145"
+          Foreground="White"/>
+
+        <ui2:TextBlock
+          x:Name="PRIVACYNOTICE"
+          FontFamily="Poppins SemiBold"
+          Opacity="0.9"
+          FontSize="12"
+          HorizontalAlignment="Left"
+          Margin="78,700,0,0"
+          TextWrapping="Wrap"
+          Text="PRIVACY NOTICE"
+          VerticalAlignment="Top"
+          Height="50" Width="145"
+          Foreground="White"/>
+
+        <ui2:TextBlock
+          x:Name="THIRDPARTY"
+          FontFamily="Poppins SemiBold"
+          Opacity="0.9"
+          FontSize="12"
+          HorizontalAlignment="Left"
+          Margin="78,680,0,0"
+          TextWrapping="Wrap"
+          Text="THIRD PARTY"
+          VerticalAlignment="Top"
+          Height="50" Width="145"
+          Foreground="White"/>
+
+        <ui2:TextBlock
+          x:Name="TOS"
+          FontFamily="Poppins SemiBold"
+          Opacity="0.9"
+          FontSize="12"
+          HorizontalAlignment="Left"
+          Margin="78,660,0,0"
+          TextWrapping="Wrap"
+          Text="TERMS OF SERVICE"
+          VerticalAlignment="Top"
+          Height="50" Width="145"
+          Foreground="White"/>
+
+        <ui2:Button
+            x:Name="CLOSE"
+            FontSize="10"
+            HorizontalAlignment="Left"
+            Margin="1232,10,0,0"
+            Opacity="0.1"
+            VerticalAlignment="Top"
+            Background="White"
+            Click="CloseButton_CLick"
+            BorderBrush="Transparent"
+            CornerRadius="2.5"
+            Height="30" Width="33"
+            Foreground="Transparent"
+            Style="{StaticResource HoverTextButtonStyle}">
+        </ui2:Button>
+
+        <ui2:TextBlock
+            x:Name="CLOSETEXT"
+            FontFamily="Poppins SemiBold"
+            FontSize="12"
+            IsHitTestVisible="False"
+            HorizontalAlignment="Left"
+            Margin="1244,15,0,0"
+            TextWrapping="Wrap"
+            Text="X"
+            VerticalAlignment="Top"
+            Height="15" Width="20"
+            Foreground="White"/>
+
+        <ui2:TextBlock
+            x:Name="VALORANTTEXT"
+            FontFamily="Poppins SemiBold"
+            FontSize="35"
+            HorizontalAlignment="Left"
+            Margin="448,60,0,0"
+            TextWrapping="Wrap"
+            Text="VALORANT"
+            VerticalAlignment="Top"
+            Height="50" Width="195"
+            Foreground="White"/>
+
+        <Image
+            x:Name="ValorantLogo"
+            HorizontalAlignment="Left"
+            Height="50"
+            Margin="386,70,0,0"
+            VerticalAlignment="Top"
+            Width="38"
+            Source="Assets/RedRiotGames.png"/>
+
+        <ui2:TextBlock
+            x:Name="EMAIL"
+            FontFamily="Poppins Bold"
+            FontSize="11"
+            HorizontalAlignment="Left"
+            Margin="390,156,0,0"
+            TextWrapping="Wrap"
+            Text="EMAIL"
+            VerticalAlignment="Top"
+            Height="18" Width="70"
+            Foreground="White"/>
+
+        <ui2:TextBlock
+            x:Name="PASSWORD"
+            FontFamily="Poppins Bold"
+            FontSize="11"
+            HorizontalAlignment="Left"
+            Margin="390,236,0,0"
+            TextWrapping="Wrap"
+            Text="PASSWORD"
+            VerticalAlignment="Top"
+            Height="18" Width="70"
+            Foreground="White"/>
+
+        <ui2:TextBox x:Name="EmailTextBox" FontFamily="Poppins"
+           Height="45"
+           Margin="386,175,425,0"
+           VerticalAlignment="Top"
+           Background="#1E1E1E"
+           Foreground="White"
+           BorderBrush="#2B2B2B"
+           BorderThickness="1"
+           FontSize="16"
+           Padding="5" TextChanged= "Email_TextChanged"/>
+
+        <ui2:PasswordBox x:Name="PasswordTextBox" FontFamily="Poppins"
+           Height="45"
+           Margin="386,258,425,0"
+           VerticalAlignment="Top"
+           Background="#1E1E1E"
+           Foreground="White"
+           BorderBrush="#2B2B2B"
+           BorderThickness="1"
+           FontSize="16"
+           TextChanged="Password_PasswordChanged"
+           Padding="5"/>
+
+        <ui2:Button
+            x:Name="Path"
+            FontFamily="Poppins SemiBold"
+            FontSize="15"
+            Margin="386,320,0,0"
+            Content=""
+            Background="#1f1f1f"
+            BorderBrush="Transparent"
+            VerticalAlignment="Top"
+            Height="45" Width="464"
+            Click="ImportBuild_Click"
+            Foreground="White"/>
+
+        <ui2:SymbolIcon
+            x:Name="PathIcon"
+            HorizontalAlignment="Left"
+            Height="20"
+            Margin="810,332,0,0"
+            VerticalAlignment="Top"
+            Width="20"
+            Foreground="White"
+            Symbol="Folder16"/>
+
+        <ui2:TextBlock
+            x:Name="AUTOMATICUPDATES"
+            FontFamily="Poppins SemiBold"
+            FontSize="11"
+            HorizontalAlignment="Left"
+            Margin="390,400,0,0"
+            TextWrapping="Wrap"
+            Text="AUTOMATIC UPDATES"
+            VerticalAlignment="Top"
+            Height="18" Width="70"
+            Foreground="White"/>
+
+        <ui2:TextBlock
+            x:Name="AUTOMATICUPDATESINFO"
+            FontFamily="Poppins SemiBold"
+            FontSize="10"
+            Opacity="0.5"
+            HorizontalAlignment="Left"
+            Margin="390,420,0,0"
+            TextWrapping="Wrap"
+            Text="VALORANT will automatically update when Riot Clien is running."
+            VerticalAlignment="Top"
+            Height="18" Width="345"
+            Foreground="White"/>
+
+        <ui2:Button
+            x:Name="REPAIR"
+            FontFamily="Poppins SemiBold"
+            FontSize="15"
+            Margin="386,500,0,0"
+            Content="Repair"
+            Background="White"
+            IsHitTestVisible="False"
+            BorderBrush="Transparent"
+            VerticalAlignment="Top"
+            Height="45" Width="232"
+            Foreground="Black"/>
+        <CheckBox
+            Content="Enable auto-update"
+            Margin="390,443,0,0"
+            FontFamily="Poppins SemiBold"
+            VerticalAlignment="Top"/>
+
+        <ui2:Button
+    x:Name="OPENREDIRECTPATH"
+    FontFamily="Poppins SemiBold"
+    FontSize="15"
+    Margin="623,499,425,0"
+    Content="Open Redirect Path"
+    Background="White"
+    BorderBrush="Transparent"
+    VerticalAlignment="Top"
+    Height="47"
+    Foreground="Black"
+    Click="OPENREDIRECTPATH_Click"
+    Width="227">
+            <ui2:Button.Style>
+                <Style TargetType="ui2:Button">
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ui2:Button">
+                                <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="5">
+                                    <!-- Adjust the corner radius as needed -->
+                                    <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="White"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </ui2:Button.Style>
+        </ui2:Button>
+
+    </Grid>
+</Page>

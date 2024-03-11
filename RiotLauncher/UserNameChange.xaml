@@ -1,0 +1,59 @@
+﻿<Page x:Class="RiotLauncher.UserNameChange"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:ui="http://schemas.modernwpf.com/2019" 
+      xmlns:ui2="http://schemas.lepo.co/wpfui/2022/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RiotLauncher"
+      Background="#000000"
+      Opacity="0.9"
+      mc:Ignorable="d" 
+      d:Width="300" d:Height="150">
+
+    <Grid>
+        <ui2:TextBox x:Name="UserName" FontFamily="Poppins"
+           Height="46"
+           PlaceholderText="New Username"
+           Margin="10,0,10,0"
+           VerticalAlignment="Center"
+           Background="#1E1E1E"
+           Foreground="White"
+           BorderBrush="#2B2B2B"
+           BorderThickness="1"
+           FontSize="16"
+           TextChanged="Username_Changed"
+           Padding="5" RenderTransformOrigin="0.5,0.5">
+            <ui2:TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ui2:TextBox.RenderTransform>
+        </ui2:TextBox>
+
+        <ui2:Button
+            x:Name="SubmitUserName"
+            Margin="0,108,0,0"
+            VerticalAlignment="Top"
+            Width="90"
+            Height="32"
+            Content="Submit"
+            Background="IndianRed"
+            Foreground="White"
+            FontFamily="Poppins Bold"
+            BorderBrush="#2B2B2B"
+            BorderThickness="1"
+            FontSize="16"
+            Click="ChangeUsername_Click"
+            Padding="5" HorizontalAlignment="Center">
+
+        </ui2:Button>
+
+
+    </Grid>
+
+
+</Page>

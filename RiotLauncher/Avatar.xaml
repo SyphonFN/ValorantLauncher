@@ -1,0 +1,184 @@
+﻿<Page x:Class="RiotLauncher.Avatar"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RiotLauncher"
+      xmlns:ui2="http://schemas.lepo.co/wpfui/2022/xaml"
+      mc:Ignorable="d" 
+      Background="#1f1f1f"
+      Opacity="1"
+      d:DesignHeight="310" d:DesignWidth="250"
+      Title="Avatar" Foreground="#FF504747">
+
+
+    <Page.Resources>
+        <local:MarginFromWidthConverter x:Key="MarginFromWidthConverter" />
+        <Style x:Key="HoverTextButtonStyle" TargetType="ui2:Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ui2:Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center">
+                                <ContentPresenter.Resources>
+                                    <Style TargetType="TextBlock">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Opacity" Value="1"/>
+                                            </Trigger>
+                                            <Trigger Property="IsMouseOver" Value="False">
+                                                <Setter Property="Opacity" Value="0.6"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </ContentPresenter.Resources>
+                            </ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    <Grid>
+
+
+        <ui2:Button
+            x:Name="UsernameChange"
+            Background="Transparent"
+            Margin="196,14,10,255"
+            Click="UsernameChange_Click"
+            BorderBrush="Transparent"
+            Style="{StaticResource HoverTextButtonStyle}">
+
+            <ui2:SymbolIcon Symbol="Edit16" Margin="0,-5,5,0"
+                            Foreground="White"/>
+
+        </ui2:Button>
+
+
+        <ui2:TextBlock
+    x:Name="UserNameText"
+    Margin="25,19,54,250"
+    Text="Syphon"
+    FontFamily="Poppins SemiBold"
+    FontSize="18"
+    Foreground="White" />
+
+
+        <Frame BorderBrush="White" BorderThickness="0.2" Margin="-30,65,-25,-205">
+
+        </Frame>
+
+
+        <ui2:Button
+            x:Name="AccountDetailsButton"
+            Background="Transparent"
+            Content="ACCOUNT DETAILS"
+            Margin="-10,91,34,0"
+            Height="30"
+            Width="226"
+            Click="AccountDetailsButton_Click"
+            FontFamily="Poppins SemiBold"
+            FontSize="14"
+            Foreground="White"
+            BorderBrush="Transparent"
+            VerticalAlignment="Top"
+            Style="{StaticResource HoverTextButtonStyle}">
+        </ui2:Button>
+
+        <ui2:Button
+            x:Name="AccountSecurityButton"
+            Background="Transparent"
+            Content="ACCOUNT SECURITY"
+            Margin="-05,136,34,0"
+            Height="30"
+            Width="226"
+            Click="AccountSecurityButton_Click"
+            FontFamily="Poppins SemiBold"
+            FontSize="14"
+            Foreground="White"
+            BorderBrush="Transparent"
+            VerticalAlignment="Top"
+            Style="{StaticResource HoverTextButtonStyle}">
+        </ui2:Button>
+
+        <ui2:Button
+            x:Name="SettingsButton"
+            Background="Transparent"
+            Content="SETTINGS"
+            Margin="-44,180,68,0"
+            Height="30"
+            Width="226"
+            Click="SettingsButton_Click"
+            FontFamily="Poppins SemiBold"
+            FontSize="14"
+            Foreground="White"
+            BorderBrush="Transparent"
+            VerticalAlignment="Top"
+            Style="{StaticResource HoverTextButtonStyle}">
+        </ui2:Button>
+
+        <ui2:Button
+            x:Name="SIGNOUTBUTTON"
+            Background="Transparent"
+            Content="SIGN OUT"
+            Margin="-44,220,68,0"
+            Height="30"
+            Width="226"
+            Click="SIGNOUTBUTTON_Click"
+            FontFamily="Poppins SemiBold"
+            FontSize="14"
+            Foreground="White"
+            BorderBrush="Transparent"
+            VerticalAlignment="Top"
+            Style="{StaticResource HoverTextButtonStyle}">
+        </ui2:Button>
+
+        <ui2:Button
+            x:Name="EXITBUTTON"
+            Background="Transparent"
+            Content="EXIT"
+            Margin="-62,260,86,0"
+            Height="30"
+            Width="226"
+            Click="EXITBUTTON_Click"
+            FontFamily="Poppins SemiBold"
+            FontSize="14"
+            Foreground="White"
+            BorderBrush="Transparent"
+            VerticalAlignment="Top"
+            Style="{StaticResource HoverTextButtonStyle}">
+        </ui2:Button>
+
+        <ui2:SymbolIcon
+            x:Name="NavigationIcon"
+            Margin="171,81,0,0"
+            Symbol="ArrowUpRight20"
+            Foreground="White"
+            Opacity=".5"
+            Width="50"
+            Height="50"
+            FontSize="15"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            ></ui2:SymbolIcon>
+
+        <ui2:SymbolIcon
+            x:Name="NavigationIcon2"
+            Margin="171,126,0,0"
+            Symbol="ArrowUpRight48"
+            FontSize="15"
+            Foreground="White"
+            Opacity=".5"
+            Width="50"
+            Height="50"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            ></ui2:SymbolIcon>
+
+    </Grid>
+</Page>
