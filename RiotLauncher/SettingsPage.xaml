@@ -9,7 +9,7 @@
       xmlns:local="clr-namespace:RiotLauncher"
       mc:Ignorable="d" 
       Background="#000000"
-      Opacity="0.9"
+      Opacity="0.6"
       d:Width="1275" d:Height="820"
       Title="SettingsPage">
 
